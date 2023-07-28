@@ -14,9 +14,6 @@ by.kawabata
 2022/12/04  補正値の整備
 2023/02/19  精度追求
 
-
-scp -r sensorHAT pi@192.168.68.108:/home/pi
-scp -r sensorHAT/*.py pi@192.168.68.126:/home/pi/sensorHAT
 """
 
 # 補正値
@@ -65,7 +62,7 @@ print('Pressure = ',press,'hPa' )
 
 
 time.sleep(0.5)
-path = '/home/pi/sensorHAT3/'
+path = '/home/pi/sensorHAT/'
 dt_now = datetime.datetime.now()
 ################## press ###################
 # # 最新のデータを一つだけ入れたファイルを作る

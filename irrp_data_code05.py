@@ -46,8 +46,6 @@ irrp_data_code04.py
 2022/02/07  sensorHATのコード表示用に改造
     05      GPIO iR_sensor = '4' 以外を使わないようにする
 
-
-
 pigpiod のインストール
 sudo apt-get install pigpio
 
@@ -75,7 +73,7 @@ import getpass
 # ユーザー名を取得
 user_name = getpass.getuser()
 print('user_name', user_name)
-path = '/home/' + user_name + '/sensorHAT3/'  # cronで起動する際には絶対パスが必要
+path = '/home/' + user_name + '/sensorHAT/'  # cronで起動する際には絶対パスが必要
 # path = '/home/' + 'tk' + '/L_remocon/' # systemdで起動する際にはrootになり絶対パスが必要
 
 # disp_size = 32 # or 64

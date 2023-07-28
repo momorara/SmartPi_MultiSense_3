@@ -15,8 +15,6 @@ pip install adafruit-circuitpython-ahtx0
 2022/03/06  AHT10がない場合に、BMPの温度を使用する。
 2022/12/04  補正値の整備
 
-scp -r sensorHAT pi@192.168.68.108:/home/pi
-scp -r sensorHAT/*.py pi@192.168.68.126:/home/pi/sensorHAT
 """
 
 # 補正値
@@ -32,7 +30,7 @@ import datetime
 import smbus
 import Adafruit_BMP.BMP085 as BMP085
 
-path = '/home/pi/sensorHAT3/'
+path = '/home/pi/sensorHAT/'
 
 
 def data_read():
