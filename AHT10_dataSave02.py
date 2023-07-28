@@ -32,7 +32,7 @@ import datetime
 import smbus
 import Adafruit_BMP.BMP085 as BMP085
 
-path = '/home/pi/sensorHAT/'
+path = '/home/pi/sensorHAT3/'
 
 
 def data_read():
