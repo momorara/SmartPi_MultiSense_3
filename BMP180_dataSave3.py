@@ -65,7 +65,7 @@ print('Pressure = ',press,'hPa' )
 
 
 time.sleep(0.5)
-path = '/home/pi/sensorHAT/'
+path = '/home/pi/sensorHAT3/'
 dt_now = datetime.datetime.now()
 ################## press ###################
 # # 最新のデータを一つだけ入れたファイルを作る
