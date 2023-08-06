@@ -1,0 +1,12 @@
+
+
+SR04	Trig:#24 Echo:#23
+Cds	#21
+SW1	#6
+SW2	#5
+LED1	#27
+LED2	#17
+BMP180	SDA:#2 SCL:#3
+AHT10	SDA:#2 SCL:#3
+赤外線センサー	#4
+チルトスイッチ	#26
