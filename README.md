@@ -27,7 +27,7 @@ git clone https://github.com/momorara/sensorHAT3 sensorHAT<br>
 説明書類の中の資料を確認ください。
 お問い合わせに関しては、サポート.txtを参照ください。
 
-<<動作環境>>
+<<動作環境>>></h4>
 2023/8/4 bullseye 11.7 node-red 3.0.2 で動作確認
 
 <h4><<ライセンス>></h4>
