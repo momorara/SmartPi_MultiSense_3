@@ -1,4 +1,4 @@
-# sensorHAT3
+# SmartPi_MultiSense_3
 
 <h4><<概要>></h4>
 　ラズパイを手に入れて、Ｌチカとかやってみたけれど、さて次は何をしようと悩んでいたら、センサーをやってみましょう。
@@ -19,7 +19,7 @@
 ・ラズパイは付属しません。<br>
 
 <h4><<使用方法>></h4>
-git clone https://github.com/momorara/sensorHAT3 sensorHAT<br>
+git clone https://github.com/momorara/SmartPi_MultiSense_3 sensorHAT<br>
 でラズパイにダウンロードしてください。<br>
 インストールについては、インストール文書に従いインストールを行ってください。<br>
 
