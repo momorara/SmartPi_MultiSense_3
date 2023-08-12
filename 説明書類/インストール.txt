@@ -16,7 +16,10 @@ sudo raspi-config等で、設定
 >>i2cデバイスとして認識されているか確認
 i2cdetect -y 1
 として、
-AHT10:38 BMP180:77が あればハードウェアの認識としてＯＫ
+AHT10:38 BMP180:77 BMP280:76が あればハードウェアの認識としてＯＫ
+BMPはどちらか一方が付いています
+
+インストールも付いている方のみでOKです。
 
 >>BMP180ライブラリのインストール
 git clone https://github.com/adafruit/Adafruit_Python_BMP.git
@@ -38,6 +41,19 @@ python3 AHT10_dataSave02.py
 30.1
 27
 Temperature: 30.1 C  Humidity: 27.0 %
+
+>>BMP280ライブラリのインストール
+sudo pip3 install bmp280
+git clone https://github.com/pimoroni/bmp280-python
+cd bmp280-python/examples/
+sudo python3 temperature-and-pressure.py 
+
+(例)
+temperature-and-pressure.py - Displays the temperature and pressure.
+Press Ctrl+C to exit!
+29.58*C 1005.60hPa
+29.57*C 1005.60hPa
+....
 
 ***node-redのインストール
 まず、
