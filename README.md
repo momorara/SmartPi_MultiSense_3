@@ -39,3 +39,6 @@ git clone https://github.com/momorara/MultiSensorPi3 sensorHAT<br>
 オリジナル部分については、オープソースとさせていただきます。
 Released under the MIT license です。
 プログラム自体はサンプルプログラムです。
+
+<h4><<アップデート>></h4>
+2023/9/14 MultiSensorPi3を使う上で失敗しそうな点をまとめました。
