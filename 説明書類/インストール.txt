@@ -34,13 +34,14 @@ Pressure = 102113.00 Pa
 Altitude = -64.74 m
 Sealevel Pressure = 102096.00 Pa
 
+>>AHT10ライブラリのインストール
+pip3 install adafruit-circuitpython-ahtx0
 cd sensorHAT
-python3 AHT10_dataSave02.py
+python3 AHTx0_dataSave03.py
 として、温度と湿度が表示されればＯＫ
 (例)
-30.1
-27
-Temperature: 30.1 C  Humidity: 27.0 %
+Temperature: 22.1 C
+Humidity: 53.4 %
 
 >>BMP280ライブラリのインストール
 sudo pip3 install bmp280
