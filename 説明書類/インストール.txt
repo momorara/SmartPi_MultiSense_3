@@ -18,23 +18,13 @@ i2cdetect -y 1
 として、
 AHT10:38 BMP180:77 BMP280:76が あればハードウェアの認識としてＯＫ
 BMPはどちらか一方が付いています
+*AHT10については、順次AHT20,AHT30に置き換わる予定です。
 
 インストールも付いている方のみでOKです。
 
->>BMP180ライブラリのインストール
-git clone https://github.com/adafruit/Adafruit_Python_BMP.git
-cd Adafruit_Python_BMP
-sudo python3 setup.py install
-cd examples/
-python3 simpletest.py
->>成功していれば、気圧が表示される。
-(例)
-Temp = 25.20 *C
-Pressure = 102113.00 Pa
-Altitude = -64.74 m
-Sealevel Pressure = 102096.00 Pa
 
->>AHT10ライブラリのインストール
+
+>>AHT10,AHT20,AHT30ライブラリのインストール
 pip3 install adafruit-circuitpython-ahtx0
 cd sensorHAT
 python3 AHTx0_dataSave03.py
@@ -43,7 +33,7 @@ python3 AHTx0_dataSave03.py
 Temperature: 22.1 C
 Humidity: 53.4 %
 
->>BMP280ライブラリのインストール
+>>BMP280ライブラリのインストール(2023/9以降)
 sudo pip3 install bmp280
 git clone https://github.com/pimoroni/bmp280-python
 cd bmp280-python/examples/
@@ -55,6 +45,19 @@ Press Ctrl+C to exit!
 29.58*C 1005.60hPa
 29.57*C 1005.60hPa
 ....
+
+>>BMP180ライブラリのインストール(BMP180を使用する場合)
+git clone https://github.com/adafruit/Adafruit_Python_BMP.git
+cd Adafruit_Python_BMP
+sudo python3 setup.py install
+cd examples/
+python3 simpletest.py
+>>成功していれば、気圧が表示される。
+(例)
+Temp = 25.20 *C
+Pressure = 102113.00 Pa
+Altitude = -64.74 m
+Sealevel Pressure = 102096.00 Pa
 
 ***node-redのインストール
 まず、
