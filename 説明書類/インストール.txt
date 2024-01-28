@@ -23,22 +23,11 @@ BMPはどちらか一方が付いています
 インストールも付いている方のみでOKです。
 
 
-
->>AHT10,AHT20,AHT30ライブラリのインストール
-pip3 install adafruit-circuitpython-ahtx0
-cd sensorHAT
-python3 AHTx0_dataSave03.py
-として、温度と湿度が表示されればＯＫ
-(例)
-Temperature: 22.1 C
-Humidity: 53.4 %
-
 >>BMP280ライブラリのインストール(2023/9以降)
 sudo pip3 install bmp280
 git clone https://github.com/pimoroni/bmp280-python
 cd bmp280-python/examples/
 sudo python3 temperature-and-pressure.py 
-
 (例)
 temperature-and-pressure.py - Displays the temperature and pressure.
 Press Ctrl+C to exit!
@@ -58,6 +47,17 @@ Temp = 25.20 *C
 Pressure = 102113.00 Pa
 Altitude = -64.74 m
 Sealevel Pressure = 102096.00 Pa
+
+
+>>AHT10,AHT20,AHT30ライブラリのインストール
+pip3 install adafruit-circuitpython-ahtx0
+cd sensorHAT
+python3 AHTx0_dataSave03.py
+として、温度と湿度が表示されればＯＫ
+(例)
+Temperature: 22.1 C
+Humidity: 53.4 %
+
 
 ***node-redのインストール
 まず、
