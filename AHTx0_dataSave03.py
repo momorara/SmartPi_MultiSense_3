@@ -16,7 +16,7 @@ pip install adafruit-circuitpython-ahtx0
 2022/12/04  補正値の整備
 2023/12/19  最近購入したAHT10がラズパイで読み取れなくなったので、
             新しいドライバを入れて対応した。
-
+2024/02/08  エラーに対する暫定対応 33行
 """
 
 # 補正値
@@ -29,7 +29,7 @@ import time
 # import busio
 # import adafruit_ahtx0
 import datetime
-import smbus
+# import smbus
 import Adafruit_BMP.BMP085 as BMP085
 
 import board
