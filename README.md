@@ -20,7 +20,7 @@
 ・ラズパイは付属しません。<br>
 
 <h4><<使用方法>></h4>
-git clone https://github.com/momorara/MultiSensorPi3 sensorHAT<br>
+git clone https://github.com/momorara/MultiSensorPi3<br>
 でラズパイにダウンロードしてください。<br>
 インストールについては、インストール文書に従いインストールを行ってください。<br>
 
