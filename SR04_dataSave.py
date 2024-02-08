@@ -69,7 +69,7 @@ def calc_distance(TRIG_PIN, ECHO_PIN, num, v=34000):
     GPIO.cleanup()
     return int(distance*10)/10
 
-path = '/home/pi/sensorHAT3/'
+path = '/home/pi/sensorHAT/'
 def main():
     # 距離計測(TRIGピン番号, ECHO_PIN番号, 計測回数, 音速[cm/s])
     dist = calc_distance(TRIG_PIN, ECHO_PIN, 3, 34000)
