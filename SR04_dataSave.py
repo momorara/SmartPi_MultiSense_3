@@ -16,6 +16,7 @@ HY-SRF05超音波距離センサモジュールを使い、距離を測定しフ
 by.kawabata
 
 2021/03/07  作成
+2024/02/08  path間違い
 
 
 scp -r sensorHAT/*.py pi@192.168.68.126:/home/pi/sensorHAT
@@ -24,6 +25,9 @@ scp -r sensorHAT pi@192.168.68.126:/home/pi
 import datetime
 import RPi.GPIO as GPIO
 import time
+
+path = '/home/pi/sensorHAT/'
+
 
 # TRIGとECHOのGPIO番号   
 TRIG_PIN = 24
@@ -69,7 +73,7 @@ def calc_distance(TRIG_PIN, ECHO_PIN, num, v=34000):
     GPIO.cleanup()
     return int(distance*10)/10
 
-path = '/home/pi/sensorHAT/'
+
 def main():
     # 距離計測(TRIGピン番号, ECHO_PIN番号, 計測回数, 音速[cm/s])
     dist = calc_distance(TRIG_PIN, ECHO_PIN, 3, 34000)
