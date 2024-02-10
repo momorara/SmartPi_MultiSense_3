@@ -1,7 +1,7 @@
-インストール v0.2 
+インストール v0.3
 
-2023/07/29
-bullseye 11.1,11.2,11.6,11.7
+2024/2/10
+bullseye 11.1,11.2,11.6,11.7,11.8
 Buster 10.10
 Buster 10.9
 
@@ -50,22 +50,32 @@ Sealevel Pressure = 102096.00 Pa
 
 
 >>AHT10,AHT20,AHT30ライブラリのインストール
+cd
 pip3 install adafruit-circuitpython-ahtx0
 cd sensorHAT
 python3 AHTx0_dataSave03.py
 として、温度と湿度が表示されればＯＫ
 (例)
-Temperature: 22.1 C
-Humidity: 53.4 %
+測定値Temperature: 25.1 C   Humidity: 31.6 %
+補正値        温度: 0            湿度: 0
+補正後Temperature: 25.1 C   Humidity: 31.0 %
 
 
 ***node-redのインストール
+cd
 まず、
 node-red-pi --max-old-space-size=256
 として、node-redが起動するならインスト済なので、
 次の行はスキップしてください。
 bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+・何か聞いてくるけど、2回とも y で進める
+・少し時間がかかります。
+・最後に色々聞いてくるけど、そのままエンターかNoで良いと思います。
+・高度な使い方やセキュリティを高めたい人はyesだったりしますが、本基板を使うレベルでは不要と考えます。
 
+node-red-pi --max-old-space-size=256 としてnode-redを立ち上げて、
+ブラウザで「http://ipアドレス:1880/」としてnode-redの編集画面を開きます。
+そこで、パレットの管理で次の2つのノードを追加してください。
 node-red-dashboard	UI用のフロー
 node-red-contrib-calc	計算用のフロー
 をパレットの管理で追加する。
@@ -78,10 +88,12 @@ crontab - pi.txtの内容をcrontab -e で、コピペする。
 
 reboot
 
+赤外線受信がうまくいかないときは少しいじってデプロイしてみてください。
+
+
+
 Copyright (c) 2021 Takanobu Kawabata
 Released under the MIT license
 https://github.com/YukinobuKurata/YouTubeMagicBuyButton/blob/master/MIT-LICENSE.txt
 
-***SR04についてはsensorHAT3ディレクトリのコピーのみで動作可能
 
-***BMP180についてはi2cの設定とライブラリのインストールが必要
