@@ -36,6 +36,7 @@ git clone https://github.com/momorara/MultiSensorPi3 sensorHAT<br>
 2023/8/4 対応OS：Buster版、Bullseye版(11.6、11.7)(32bit)での動作を確認しています。<br>
 2023/11 bookwormがリリースされ、Legacyがbullseyeとなりました。その時点で何か変更があるのか、こちらでも検証中です。<br>
 2024/2/10 11.8(32bit)で動作確認をいたしました。<br>
+2024/2/22 Pi5を調達しBookWormで検証しましたが、動作しませんでした。時間がかかりそうです。<br>
 
 <h4><<ライセンス>></h4>
 使用しているライブラリについては、ライブラリ制作者のライセンス規定を参照ください。
