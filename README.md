@@ -38,6 +38,7 @@ git clone https://github.com/momorara/MultiSensorPi3 sensorHAT<br>
 2024/2/10 11.8(32bit)で動作確認をいたしました。<br>
 2024/2/22 Pi5を調達しBookWormで検証しましたが、動作しませんでした。時間がかかりそうです。<br>
 2024/2/27 11.9(32bit)で動作確認をいたしました。<br>
+2024/07/28 bullseye 11.10 で動作確認しました。(on update)<br>
 
 <h4><<ライセンス>></h4>
 使用しているライブラリについては、ライブラリ制作者のライセンス規定を参照ください。
