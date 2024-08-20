@@ -10,6 +10,7 @@ BMP180_dataSave3.py  python3で実行のこと
 by.kawabata
 
 20230812    BMP180 と BMP280 を意識せずに使えるようにしたい。
+20240820    初回低い個体への対応を990未満とした
  
 """
 
@@ -68,7 +69,7 @@ if BMPsesorName == 'BMP280' :
                 time.sleep(3)
                 press = bmp280.get_pressure()
     # 初回だけ異常値が出る場合があるので、補正
-    if press < 900:
+    if press < 990:
         time.sleep(1)
         press = bmp280.get_pressure()
     # print('{:05.2f}hPa'.format(press))
