@@ -10,7 +10,6 @@
 
 # 使っていないセンサーはコメントとしてください。
 * * * * * sleep  2 && python3 /home/pi/sensorHAT/BMP1280_dataSave.py
-#* * * * * sleep 45 && python3 /home/pi/sensorHAT/AHT10_dataSave02.py
 * * * * * sleep 45 && python3 /home/pi/sensorHAT/AHTx0_dataSave03.py
 
 
