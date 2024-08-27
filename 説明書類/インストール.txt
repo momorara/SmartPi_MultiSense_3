@@ -1,7 +1,7 @@
-インストール v0.3
+インストール v0.4
 
-2024/2/10
-bullseye 11.1,11.2,11.6,11.7,11.8
+2024/8/27
+bullseye 11.1,11.2,11.6,11.7,11.8,11.10
 Buster 10.10
 Buster 10.9
 
@@ -68,6 +68,7 @@ node-red-pi --max-old-space-size=256
 として、node-redが起動するならインスト済なので、
 次の行はスキップしてください。
 bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+
 ・何か聞いてくるけど、2回とも y で進める
 ・少し時間がかかります。
 ・最後に色々聞いてくるけど、そのままエンターかNoで良いと思います。
