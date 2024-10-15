@@ -40,6 +40,7 @@ git clone https://github.com/momorara/MultiSensorPi3 sensorHAT<br>
 2024/2/27 11.9(32bit)で動作確認をいたしました。<br>
 2024/07/28 bullseye 11.10 で動作確認しました。(on update)<br>
 2024/08/27 最新のNode-RED v4.0.2 Node.js v20.17.0で動作確認しました。<br>
+2024/10/15 bullseye 11.11 , Node-RED v4.0.5 , Node.js v20.18.0で動作確認しました。(on update)<br>
 
 <h4><<ライセンス>></h4>
 使用しているライブラリについては、ライブラリ制作者のライセンス規定を参照ください。
