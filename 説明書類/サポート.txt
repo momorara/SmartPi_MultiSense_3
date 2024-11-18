@@ -4,7 +4,7 @@
 部品キット、完成品、システムＳＤの提供有無に関わらず、動作のためのサポートをさせていただきます。
 
 サポートの方法
-・メールによるサポートとさせていただきます。pc_mailbox@mineo.jp
+・メールによるサポートとさせていただきます。tkj-works@mbr.nifty.com
 ・サポートページ　https://github.com/momorara/MultiSensorPi3
 ・サポートコミュニティー　https://www.facebook.com/groups/3773038759434230
 
