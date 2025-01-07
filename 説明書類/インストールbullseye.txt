@@ -1,0 +1,102 @@
+インストール v0.4
+
+2024/8/27
+bullseye 11.1,11.2,11.6,11.7,11.8,11.10
+Buster 10.10
+Buster 10.9
+2024/10/15
+bullseye 11.11
+
+システムをインストール
+
+リポジトリのsensorHAT3をダウンロード
+git clone https://github.com/momorara/MultiSensorPi3 sensorHAT
+
+i2cを使用できるようにする。
+sudo raspi-config等で、設定
+
+>>i2cデバイスとして認識されているか確認
+i2cdetect -y 1
+として、
+AHT10:38 BMP180:77 BMP280:76が あればハードウェアの認識としてＯＫ
+BMPはどちらか一方が付いています
+*AHT10については、順次AHT20,AHT30に置き換わる予定です。
+
+インストールも付いている方のみでOKです。
+
+
+>>BMP280ライブラリのインストール(2023/9以降)
+sudo pip3 install bmp280
+git clone https://github.com/pimoroni/bmp280-python
+cd bmp280-python/examples/
+sudo python3 temperature-and-pressure.py 
+(例)
+temperature-and-pressure.py - Displays the temperature and pressure.
+Press Ctrl+C to exit!
+29.58*C 1005.60hPa
+29.57*C 1005.60hPa
+....
+
+>>BMP180ライブラリのインストール(BMP180を使用する場合)
+git clone https://github.com/adafruit/Adafruit_Python_BMP.git
+cd Adafruit_Python_BMP
+sudo python3 setup.py install
+cd examples/
+python3 simpletest.py
+>>成功していれば、気圧が表示される。
+(例)
+Temp = 25.20 *C
+Pressure = 102113.00 Pa
+Altitude = -64.74 m
+Sealevel Pressure = 102096.00 Pa
+
+
+>>AHT10,AHT20,AHT30ライブラリのインストール
+cd
+pip3 install adafruit-circuitpython-ahtx0
+cd sensorHAT
+python3 AHTx0_dataSave03.py
+として、温度と湿度が表示されればＯＫ
+(例)
+測定値Temperature: 25.1 C   Humidity: 31.6 %
+補正値        温度: 0            湿度: 0
+補正後Temperature: 25.1 C   Humidity: 31.0 %
+
+
+***node-redのインストール
+cd
+まず、
+node-red-pi --max-old-space-size=256
+として、node-redが起動するならインスト済なので、
+次の行はスキップしてください。
+bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+
+・何か聞いてくるけど、2回とも y で進める
+・少し時間がかかります。
+・最後に色々聞いてくるけど、そのままエンターかNoで良いと思います。
+・高度な使い方やセキュリティを高めたい人はyesだったりしますが、本基板を使うレベルでは不要と考えます。
+
+node-red-pi --max-old-space-size=256 としてnode-redを立ち上げて、
+ブラウザで「http://ipアドレス:1880/」としてnode-redの編集画面を開きます。
+そこで、パレットの管理で次の2つのノードを追加してください。
+node-red-dashboard	UI用のフロー
+node-red-contrib-calc	計算用のフロー
+をパレットの管理で追加する。
+
+***センサーui用のフローを読み込む
+flows.json
+
+***cronの設定
+crontab - pi.txtの内容をcrontab -e で、コピペする。
+
+reboot
+
+赤外線受信がうまくいかないときは少しいじってデプロイしてみてください。
+
+
+
+Copyright (c) 2021 Takanobu Kawabata
+Released under the MIT license
+https://github.com/YukinobuKurata/YouTubeMagicBuyButton/blob/master/MIT-LICENSE.txt
+
+
